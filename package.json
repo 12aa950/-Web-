@@ -1,0 +1,14 @@
+{
+  "name": "campus-lost-and-found",
+  "version": "1.0.0",
+  "description": "校园失物招领 — 福州大学软件工程作业（Web 版）",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}

@@ -1,0 +1,91 @@
+/* 校园失物招领 — 公共样式 */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", sans-serif;
+       background: #F5F6F8; color: #333; line-height: 1.6; }
+
+/* 顶栏 */
+.topbar { background: #FFFFFF; border-bottom: 1px solid #EEE; padding: 16px 32px;
+          display: flex; align-items: center; gap: 24px; }
+.logo { font-size: 22px; color: #07C160; font-weight: 700; }
+.nav { display: flex; gap: 12px; margin-left: auto; }
+.nav button { background: transparent; border: 0; padding: 8px 16px; font-size: 15px;
+              color: #555; cursor: pointer; border-radius: 8px; }
+.nav button:hover { background: #F0F1F2; }
+.nav button.active { color: #07C160; background: #E8F8EF; font-weight: 600; }
+
+/* 主区 */
+main { max-width: 960px; margin: 24px auto; padding: 0 16px; }
+.footer { text-align: center; color: #999; padding: 24px; font-size: 13px; }
+
+/* 搜索栏 */
+.searchbar { background: #FFF; border-radius: 14px; padding: 12px 16px;
+             display: flex; gap: 12px; align-items: center; margin-bottom: 16px; }
+.searchbar input { flex: 1; border: 0; outline: 0; font-size: 15px; padding: 6px 8px; }
+.searchbar button { background: #07C160; color: #FFF; border: 0; padding: 8px 18px;
+                   border-radius: 8px; cursor: pointer; font-size: 14px; }
+.searchbar button.secondary { background: #F0F1F2; color: #333; }
+
+/* 标签页 */
+.tabs { display: flex; gap: 4px; margin-bottom: 16px; }
+.tabs button { flex: 1; padding: 10px; border: 0; background: #FFF; cursor: pointer;
+               font-size: 15px; border-radius: 10px; color: #555; }
+.tabs button.active { color: #07C160; background: #E8F8EF; font-weight: 600; }
+
+/* 卡片 */
+.list { display: grid; gap: 12px; }
+.card { background: #FFF; border-radius: 14px; padding: 16px; display: flex;
+        gap: 16px; cursor: pointer; transition: transform .12s, box-shadow .12s; }
+.card:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,.06); }
+.thumb { width: 96px; height: 96px; border-radius: 12px; background: #4A90D9;
+         display: flex; align-items: center; justify-content: center;
+         color: #FFF; font-size: 36px; flex-shrink: 0; }
+.body { flex: 1; min-width: 0; }
+.title { font-size: 17px; font-weight: 600; margin-bottom: 6px; color: #222; }
+.meta-row { display: flex; gap: 10px; align-items: center; margin-bottom: 4px; }
+.tag { font-size: 12px; padding: 3px 10px; border-radius: 999px; color: #FFF; }
+.tag.lost { background: #FF7043; }
+.tag.found { background: #07C160; }
+.tag.done { background: #888; }
+.sub { color: #888; font-size: 13px; }
+
+/* 空状态 */
+.empty { text-align: center; padding: 60px 20px; color: #999; font-size: 15px; }
+
+/* 弹窗 */
+.modal { position: fixed; inset: 0; background: rgba(0,0,0,.45);
+         display: flex; align-items: center; justify-content: center; z-index: 100; }
+.modal[hidden] { display: none; }
+.modal-card { background: #FFF; border-radius: 16px; padding: 24px;
+              width: min(520px, 92vw); max-height: 90vh; overflow: auto; }
+.modal-card h2 { font-size: 20px; margin-bottom: 16px; }
+.modal-card label { display: block; font-size: 13px; color: #666;
+                    margin-bottom: 12px; }
+.modal-card input, .modal-card textarea { width: 100%; padding: 10px 12px;
+              border: 1px solid #DDD; border-radius: 8px; font-size: 14px;
+              margin-top: 4px; font-family: inherit; }
+.modal-card textarea { min-height: 70px; resize: vertical; }
+.modal-actions { display: flex; gap: 10px; justify-content: flex-end;
+                 margin-top: 16px; }
+.btn-primary, .btn-secondary { padding: 9px 20px; border: 0;
+        border-radius: 8px; cursor: pointer; font-size: 14px; }
+.btn-primary { background: #07C160; color: #FFF; }
+.btn-secondary { background: #F0F1F2; color: #333; }
+
+.type-tabs { display: flex; gap: 8px; margin-bottom: 16px; }
+.type-tabs .tab { flex: 1; padding: 10px; border: 1px solid #DDD; background: #FFF;
+                  border-radius: 10px; cursor: pointer; font-size: 13px; color: #666; }
+.type-tabs .tab.active { border-color: #07C160; background: #E8F8EF; color: #07C160; }
+
+.modal-card .meta { display: flex; gap: 10px; margin-bottom: 12px; }
+.modal-card .meta .time { color: #888; font-size: 13px; }
+.modal-card .desc { background: #F5F6F8; padding: 12px; border-radius: 8px;
+                     margin-bottom: 12px; font-size: 14px; }
+.modal-card ul.info { list-style: none; font-size: 14px; }
+.modal-card ul.info li { padding: 6px 0; border-bottom: 1px solid #F0F1F2; }
+.modal-card ul.info li:last-child { border-bottom: 0; }
+
+/* 分类筛选条 */
+.filterbar { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px; }
+.filterbar button { padding: 6px 14px; border-radius: 999px; border: 1px solid #DDD;
+                    background: #FFF; cursor: pointer; font-size: 13px; color: #555; }
+.filterbar button.active { background: #07C160; color: #FFF; border-color: #07C160; }
